@@ -1,0 +1,150 @@
+<div class="summary-container">
+    <h1>Revisión de Configuración del Robot de Inversión</h1>
+
+    <!-- Resumen de la Configuración -->
+    <div class="config-summary">
+        <h2>Tu Configuración</h2>
+        <ul>
+            <li><strong>Monto Máximo por Operación:</strong> S/ <span id="summaryMaxAmount"></span></li>
+            <li><strong>Monto Mínimo por Operación:</strong> S/ <span id="summaryMinAmount"></span></li>
+            <li><strong>Tipo de Operación:</strong> <span id="summaryOperationType"></span></li>
+            <li><strong>Débito Automático:</strong> <span id="summaryAutomaticDebit"></span></li>
+            <li><strong>Monto a Debitar:</strong> S/ <span id="summaryDebitAmount"></span></li>
+            <li><strong>Número Máximo de Débitos por Mes:</strong> <span id="summaryMaxDebits"></span></li>
+        </ul>
+    </div>
+
+    <!-- Términos y Advertencias -->
+    <div class="terms-container">
+        <h3>Términos y Condiciones</h3>
+        <p>
+            - Si el monto excede el límite permitido por tu tipo de inversionista, la oferta no se realizará.
+            <br>
+            - Límites de inversión:
+            <ul>
+                <li><strong>Inversionista Natural:</strong> Máximo 20% de la oferta.</li>
+                <li><strong>Inversionista Institucional:</strong> Máximo 99% de la oferta.</li>
+            </ul>
+            - Si no cuentas con fondos suficientes en tu billetera o cuenta, la inversión no se realizará.
+        </p>
+
+        <!-- Aceptación de Términos -->
+        <div class="accept-terms">
+            <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+            <label for="acceptTerms">He leído y acepto los términos y condiciones.</label>
+        </div>
+    </div>
+
+    <!-- Botón de Confirmar y Guardar -->
+    <button id="finalSaveBtn" class="submit-btn" disabled>Guardar Configuración</button>
+</div>
+
+<style>
+.summary-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.terms-container {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.accept-terms {
+    margin-top: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.accept-terms input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.submit-btn:hover:enabled {
+    background-color: #0056b3;
+}
+</style>
+
+<script>
+// Datos ficticios cargados para el ejemplo, en la práctica se pasará desde la pantalla anterior
+const robotConfig = {
+    maxAmount: 1000,
+    minAmount: 100,
+    operationType: 'Préstamos',
+    automaticDebit: true,
+    debitAmount: 500,
+    maxDebits: 3
+};
+
+// Función para cargar la información de la configuración en el resumen
+function loadSummary() {
+    document.getElementById('summaryMaxAmount').innerText = robotConfig.maxAmount;
+    document.getElementById('summaryMinAmount').innerText = robotConfig.minAmount;
+    document.getElementById('summaryOperationType').innerText = robotConfig.operationType;
+    document.getElementById('summaryAutomaticDebit').innerText = robotConfig.automaticDebit ? 'Sí' : 'No';
+    document.getElementById('summaryDebitAmount').innerText = robotConfig.debitAmount || 'N/A';
+    document.getElementById('summaryMaxDebits').innerText = robotConfig.maxDebits;
+}
+
+// Activar o desactivar el botón de guardar según la aceptación de términos
+document.getElementById('acceptTerms').onchange = function() {
+    document.getElementById('finalSaveBtn').disabled = !this.checked;
+};
+
+// Al hacer clic en el botón de guardar
+document.getElementById('finalSaveBtn').onclick = function() {
+    if (document.getElementById('acceptTerms').checked) {
+        // Aquí se agregaría la lógica para guardar la configuración en el backend
+        alert('Configuración guardada exitosamente');
+        window.location.href = '/dashboard'; // Redirige al dashboard u otra pantalla tras guardar
+    }
+};
+
+// Cargar los datos de resumen al cargar la página
+window.onload = loadSummary;
+</script>

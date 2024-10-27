@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración del Robot de Inversión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Configuración del Robot de Inversión</h1>
+
+    <!-- Botón para regresar al listado -->
+    <div class="mb-3">
+        <a href="admin-robot-de-inversion.html" class="btn btn-secondary">← Regresar a listado</a>
+    </div>
+
+    <!-- Sección Datos -->
+    <div class="card mb-4">
+        <h5 class="card-header">Datos</h5>
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombreCompleto" value="John Doe" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" value="john.doe@email.com" disabled>
+            </div>
+            <div class="mb-3">
+                <label for="fechaAfiliacion" class="form-label">Fecha de Afiliación</label>
+                <input type="date" class="form-control" id="fechaAfiliacion" value="2023-06-15" disabled>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Tu Configuración -->
+    <div class="card mb-4">
+        <h5 class="card-header">Tu Configuración</h5>
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="montoMaximo" class="form-label">Monto Máximo por Operación (S/)</label>
+                <input type="number" class="form-control" id="montoMaximo" value="1000">
+            </div>
+            <div class="mb-3">
+                <label for="montoMinimo" class="form-label">Monto Mínimo por Operación (S/)</label>
+                <input type="number" class="form-control" id="montoMinimo" value="100">
+            </div>
+            <div class="mb-3">
+                <label for="tipoOperacion" class="form-label">Tipo de Operación</label>
+                <input type="text" class="form-control" id="tipoOperacion" value="Préstamos">
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Débito Automático -->
+    <div class="card mb-4">
+        <h5 class="card-header">Débito Automático</h5>
+        <div class="card-body">
+            <div class="mb-3">
+                <label for="debitoAutomatico" class="form-label">Débito Automático</label>
+                <select class="form-select" id="debitoAutomatico">
+                    <option value="sí" selected>Sí</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="montoDebitar" class="form-label">Monto a Debitar (S/)</label>
+                <input type="number" class="form-control" id="montoDebitar" value="500">
+            </div>
+            <div class="mb-3">
+                <label for="maxDebitos" class="form-label">Número Máximo de Débitos por Mes</label>
+                <input type="number" class="form-control" id="maxDebitos" value="3">
+            </div>
+        </div>
+    </div>
+
+    <!-- Botones de Acción -->
+    <div class="d-flex justify-content-between">
+        <button type="button" class="btn btn-danger">Desafiliar</button>
+        <div>
+            <a href="admin-robot-de-inversion.html" class="btn btn-secondary me-2">Cancelar</a>
+            <a href="admin-robot-de-inversion-email-cambios.html" class="btn btn-primary">Guardar Cambios</a>
+
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
