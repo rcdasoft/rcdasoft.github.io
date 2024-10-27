@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Asesor Humano</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        .option-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 50px;
+        }
+
+        .option-card {
+            width: 200px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .option-card:hover {
+            transform: scale(1.05);
+            border-color: #007bff;
+        }
+
+        .option-icon {
+            font-size: 50px;
+            color: #007bff;
+        }
+
+        .option-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .option-description {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container text-center">
+    <h1>Panel de Asesor Financiero</h1>
+    <div class="option-container">
+        <!-- Botón Solicitudes -->
+        <div class="option-card">
+            <a href="admin-asistente-solicitudes.html" class="text-decoration-none text-reset">
+                <i class="bi bi-envelope option-icon"></i>
+                <div class="option-title">Solicitudes</div>
+                <div class="option-description">Revisa las solicitudes de los usuarios.</div>
+            </a>
+        </div>
+    
+        <!-- Botón Inversionistas Administrados -->
+        <div class="option-card">
+            <a href="admin-asistente-inversionistas.html" class="text-decoration-none text-reset">
+                <i class="bi bi-person-lines-fill option-icon"></i>
+                <div class="option-title">Inversionistas Administrados</div>
+                <div class="option-description">Busca y administra inversionistas.</div>
+            </a>
+        </div>
+    
+        <!-- Botón Invertir -->
+        <div class="option-card">
+            <i class="bi bi-currency-dollar option-icon"></i>
+            <div class="option-title">Invertir</div>
+            <div class="option-description">Realiza inversiones en nombre de tus clientes.</div>
+        </div>
+    </div>
+    
+    <!-- Botón Regresar a Listado -->
+    <div class="mt-4">
+        <a href="index.html" class="btn btn-secondary">
+            ← Regresar a index
+        </a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
