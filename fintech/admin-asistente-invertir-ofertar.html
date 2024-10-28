@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invertir en Proyecto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .badge-large {
+            font-size: 1.2em;
+            padding: 10px 15px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Asistente Financiero: Invertir en Proyecto</h1>
+    
+    <!-- Botón para regresar a la lista de proyectos -->
+    <a href="admin-asistente-invertir.html" class="btn btn-secondary mb-3">Regresar a Proyectos Activos</a>
+    
+    <div class="row">
+        <!-- Columna 1: Card del Proyecto Escogido -->
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h4>Proyecto Alpha</h4>
+                </div>
+                <div class="card-body">
+                    <p><strong>Empresa:</strong> Innovatech S.A.C</p>
+                    <p><strong>Descripción del Proyecto:</strong> Expansión de capacidad productiva para satisfacer la demanda creciente en el mercado local.</p>
+                    <p><strong>TEA:</strong> 15%</p>
+                    <p><strong>TNA:</strong> 14%</p>
+                    <p><strong>Riesgo:</strong> <span class="badge bg-success badge-large">A</span></p>
+                    <p><strong>Monto a financiar:</strong> S/ 200,000</p>
+                    <p><strong>Porcentaje de avance:</strong></p>
+                    <div class="progress mb-2">
+                        <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
+                    </div>
+                    <p><strong>Monto que falta financiar:</strong> S/ 80,000</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna 2: Secciones de Inversión -->
+        <div class="col-md-6">
+            <!-- Primera Sección: Información y Botones -->
+            <div class="mb-4">
+                <h5 class="mb-3">Información de la Inversión</h5>
+                <span class="badge bg-primary badge-large">Monto Que Falta Financiar: S/ 80,000</span>
+                <span class="badge bg-info badge-large">Total a Invertir: S/ 20,000</span>
+                <div class="mt-3">
+                    <a href="admin-asistente-invertir-enviar-oferta.html" class="btn btn-success me-2">Ofertar</a>
+
+                    <button class="btn btn-secondary">Recalcular</button>
+                </div>
+            </div>
+
+            <!-- Segunda Sección: Tabla de Inversionistas -->
+            <div class="mb-4">
+                <h5 class="mb-3">Inversionistas en la Colecta</h5>
+                <table class="table table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Monto a Invertir</th>
+                            <th>Monto en Billetera</th>
+                            <th>Nombre del Inversionista</th>
+                            <th>Participa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Simulación de 10 inversionistas -->
+                        <tr>
+                            <td><input type="number" class="form-control" value="2000"></td>
+                            <td>S/ 10,000</td>
+                            <td>John Doe</td>
+                            <td><input type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="form-control" value="1500"></td>
+                            <td>S/ 8,000</td>
+                            <td>Mary Johnson</td>
+                            <td><input type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="form-control" value="1800"></td>
+                            <td>S/ 9,500</td>
+                            <td>Michael Williams</td>
+                            <td><input type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="form-control" value="1600"></td>
+                            <td>S/ 7,500</td>
+                            <td>Linda Brown</td>
+                            <td><input type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="form-control" value="1400"></td>
+                            <td>S/ 12,000</td>
+                            <td>James Jones</td>
+                            <td><input type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="form-control" value="1200"></td>
+                            <td>S/ 6,500</td>
+                            <td>Patricia Garcia</td>
+                            <td><input type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="form-control" value="1100"></td>
+                            <td>S/ 5,000</td>
+                            <td>Robert Miller</td>
+                            <td><input type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="form-control" value="1300"></td>
+                            <td>S/ 8,000</td>
+                            <td>Jennifer Wilson</td>
+                            <td><input type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="form-control" value="1900"></td>
+                            <td>S/ 11,000</td>
+                            <td>David Johnson</td>
+                            <td><input type="checkbox" checked></td>
+                        </tr>
+                        <tr>
+                            <td><input type="number" class="form-control" value="1700"></td>
+                            <td>S/ 9,000</td>
+                            <td>Barbara Anderson</td>
+                            <td><input type="checkbox" checked></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
